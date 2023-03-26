@@ -1,0 +1,102 @@
+### PRODUCTSS ##################################################
+
+### GET ALL PRODUCTS
+GET http://localhost:5000/api/v1/products
+
+### CREATE A PRODUCT
+POST http://localhost:5000/api/v1/products
+Content-Type: application/json
+
+{
+"name":"banana",
+"description":"fruit",
+"price":2
+
+}
+
+### GET A SPECIFIC PRODUCT
+GET http://localhost:5000/api/v1/products/6419c44b2faa75d561db6ddc
+
+### UPDATE A SPECIFIC PRODUCT BY ID
+PUT http://localhost:5000/api/v1/products/641b0c94a58d546188897dd3
+Content-Type: application/json
+
+{
+"name":"tomate",
+"description":"vegetable",
+"price":1,
+
+}
+
+### DELETE A SPECIFIC PRODUCT BY ID
+DELETE http://localhost:5000/api/v1/products/641b7050b76301da79d46cd6
+
+
+
+### USERS ##########################################################
+
+### CREATE / REGISTER A USER
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "r",
+    "email": "r@r.com",
+    "password": "Ro123456"
+}
+
+### LOGIN
+POST http://localhost:5000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email":"r@r.com",
+    "password":"Ro123456"
+}
+
+
+
+### ORDERS ##########################################################
+
+### CREATE ORDER
+POST http://localhost:5000/api/v1/cart
+Content-Type: application/json
+Authorization: Bearer 
+
+[
+{
+"name":"cucumber"
+},
+{
+"name":"mango"
+},
+{
+"name":"tomate"
+}
+]
+
+
+### GET ORDER
+GET http://localhost:5000/api/v1/cart
+Authorization: Bearer 
+
+
+### UPDATE SPECIFIC ORDER BY ID
+PUT http://localhost:5000/api/v1/cart/641c32632941b40d97774fee
+Content-Type: application/json
+Authorization: Bearer 
+
+[
+{
+"name":"cucumber"
+},
+{
+"name":"mango"
+}
+
+]
+
+
+### DELETE A SPECIFIC ORDER BY ID
+DELETE  http://localhost:5000/api/v1/cart/641b90f1d6645fab674e1d5e
+Authorization: Bearer 
